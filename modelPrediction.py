@@ -52,6 +52,7 @@ class digitRecognitionModel(nn.Module):
 model = digitRecognitionModel(1,10,10)
 modelPath=Path("C:/Users/Vanshika/PycharmProjects/digit recognition/model.pth")
 model.load_state_dict(torch.load(modelPath))
+
 def get_number(image):
     transform=transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
     image_tensor = transform(image)
